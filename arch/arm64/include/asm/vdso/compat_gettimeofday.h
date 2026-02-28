@@ -10,6 +10,10 @@
 #include <asm/unistd.h>
 #include <asm/errno.h>
 
+#ifndef __NR_compat_clock_getres
+#define __NR_compat_clock_getres 229
+#endif
+
 #include <asm/vdso/compat_barrier.h>
 
 #define __VDSO_USE_SYSCALL		ULLONG_MAX
